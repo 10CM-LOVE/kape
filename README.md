@@ -6,3 +6,29 @@
 ## [MAP](https://github.com/qLarge/MAP) 's upgrade version!
 + remove MAP's meaningless things
 + function is easier!
+
+### kape usage
+version : $V
+```gradle
+repositories {
+    maven { url = uri("https://jitpack.io") }
+}
+dependencies {
+    implementation("com.github.qLarge:kape:$V")
+}
+```
+
+```xml
+<repositories>
+    <repository>
+        <id>jitpack.io</id>
+        <url>https://jitpack.io</url>
+    </repository>
+</repositories>
+
+<dependency>
+    <groupId>com.github.qLarge</groupId>
+    <artifactId>kape</artifactId>
+    <version>$V</version>
+</dependency>
+```
