@@ -1,0 +1,4 @@
+name: Kape-Test
+main: io.github.asr.kape.test.KapeTestPlugin
+version: A.2
+api-version: 1.19
