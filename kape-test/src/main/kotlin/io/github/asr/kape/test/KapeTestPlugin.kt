@@ -5,6 +5,7 @@ import io.github.asr.kape.entity.extendedModify
 import io.github.asr.kape.entity.modify
 import io.github.asr.kape.entity.summonEntity
 import io.github.asr.kape.events.kapeEvents
+import io.github.asr.kape.events.listener
 import io.github.asr.kape.events.player.*
 import io.github.asr.kape.inventory.extendedInventory
 import io.github.asr.kape.inventory.inventory
@@ -17,6 +18,7 @@ import org.bukkit.entity.EntityType
 import org.bukkit.entity.Fireball
 import org.bukkit.event.inventory.InventoryClickEvent
 import org.bukkit.event.player.PlayerDropItemEvent
+import org.bukkit.event.player.PlayerInteractEvent
 import org.bukkit.inventory.AnvilInventory
 import org.bukkit.inventory.ItemStack
 import org.bukkit.inventory.meta.CrossbowMeta
@@ -29,6 +31,12 @@ class KapeTestPlugin : JavaPlugin() {
 
         stack.meta(CrossbowMeta::class.java) {
             it.addChargedProjectile(ItemStack(Material.SPECTRAL_ARROW))
+        }
+
+        listener {
+            addEvent(PlayerInteractEvent::class.java) {
+                it.player.sendMessage(text("인터렉트!"))
+            }
         }
 
         kapeEvents {
