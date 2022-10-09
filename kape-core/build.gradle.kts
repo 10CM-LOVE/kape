@@ -1,5 +1,4 @@
 plugins {
-    id("org.jetbrains.dokka") version "1.6.21"
     `maven-publish`
     signing
 }
@@ -27,7 +26,7 @@ tasks {
 
 publishing {
     publications {
-        create<MavenPublication>(project.name) {
+        create<MavenPublication>("${rootProject.name}-core") {
             from(components["java"])
             artifact(tasks["sourcesJar"])
             artifact(tasks["javadocJar"])
