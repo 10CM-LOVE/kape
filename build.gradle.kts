@@ -2,13 +2,11 @@ plugins {
     kotlin("jvm") version "1.6.21"
 }
 
-java {
-    toolchain {
-        languageVersion.set(JavaLanguageVersion.of(17))
-    }
-}
-
 allprojects {
+    java {
+        toolchain.languageVersion.set(JavaLanguageVersion.of(17))
+    }
+    
     repositories {
         mavenCentral()
     }
