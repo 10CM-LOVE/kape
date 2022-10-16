@@ -1,8 +1,12 @@
 package io.github.asr.kape
 
 import net.kyori.adventure.text.Component
+import net.kyori.adventure.text.TextComponent
 import net.kyori.adventure.text.format.TextColor
 import net.kyori.adventure.util.HSVLike
+
+fun Component.toText() = this as TextComponent
+
 
 fun text(content: String) = Component.text(content)
 
