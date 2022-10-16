@@ -27,3 +27,5 @@ enum class KapeTextColor(private val color: TextColor) {
 
     fun toTextColor() = color
 }
+
+operator fun Component.plus(component: Component) = append(component)

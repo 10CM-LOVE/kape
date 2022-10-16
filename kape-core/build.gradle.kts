@@ -1,14 +1,11 @@
 plugins {
+    kotlin("jvm") version "1.6.21"
     id("org.jetbrains.dokka") version "1.6.21"
     `maven-publish`
     signing
 }
 
 tasks {
-    compileKotlin {
-        kotlinOptions.jvmTarget = "17"
-    }
-
     javadoc {
         options.encoding = "UTF-8"
     }
@@ -27,7 +24,7 @@ tasks {
 
 publishing {
     publications {
-        create<MavenPublication>(project.name) {
+        create<MavenPublication>("${rootProject.name}-core") {
             from(components["java"])
             artifact(tasks["sourcesJar"])
             artifact(tasks["javadocJar"])
