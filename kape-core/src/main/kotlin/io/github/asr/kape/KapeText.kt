@@ -23,7 +23,8 @@ enum class KapeTextColor(private val color: TextColor) {
     AQUA(TextColor.color(RGB(85, 255, 255))),
     LIGHT_PURPLE(TextColor.color(RGB(255, 85, 255))),
     YELLOW(TextColor.color(RGB(255, 255, 85))),
-    WHITE(TextColor.color(RGB(255, 85, 85)));
+    RED(TextColor.color(RGB(255, 85, 85))),
+    WHITE(TextColor.color(RGB(255, 255, 255)));
 
     fun toTextColor() = color
 }
