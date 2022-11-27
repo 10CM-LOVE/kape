@@ -14,7 +14,7 @@ repositories {
     maven { url = uri("https://jitpack.io") }
 }
 dependencies {
-    implementation("com.github.q-1x:kape:$V")
+    implementation("com.github.10CM-LOVE:kape:$V")
 }
 ```
 
